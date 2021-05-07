@@ -49,6 +49,8 @@ message ExecutionResponse {
     string output = 2;
     google.protobuf.Empty empty = 3;
   }
+
+  RequestStatus status = 4;
 }
 
 message EventInfo {
