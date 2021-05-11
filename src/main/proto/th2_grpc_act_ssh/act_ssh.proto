@@ -36,6 +36,9 @@ message ExecutionRequest {
 
   // The parameters that should be passed to the script
   map<string, string> parameters = 3;
+
+  // The alias for the endpoint to connect. If it is empty and the only one endpoint is define for the act that endpoint will be used
+  string endpoint_alias = 4;
 }
 
 message ExecutionResponse {
