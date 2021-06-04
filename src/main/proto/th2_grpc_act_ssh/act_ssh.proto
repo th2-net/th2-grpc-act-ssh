@@ -43,7 +43,12 @@ message ExecutionRequest {
 
 message ExecutionResponse {
   // The script or command exit code
-  int32 exit_code = 1;
+  // It will be set if the script or command completed itself
+  // If the script or command was interrupted the execution result will have no value
+  oneof exit_code_value {
+    int32 exit_code = 1;
+    google.protobuf.Empty unknown_exit_code = 5;
+  }
 
   // The script or command output.
   // It will be attached to the response if it is enabled for the `execution_alias` in the request.
@@ -53,6 +58,7 @@ message ExecutionResponse {
     google.protobuf.Empty empty = 3;
   }
 
+  bool interupted = 6;
   RequestStatus status = 4;
 }
 
