@@ -48,6 +48,10 @@ If you wish to manually create and publish package for Python:
 
 ## Release Notes
 
+### 1.0.0
+
++ Up major version for common V3 component
+
 ### 0.0.5
 
 + The exit code value can be unknown when the script or command is interrupting by the act. The interrupted flag will be `true` in this case.
