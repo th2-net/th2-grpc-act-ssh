@@ -1,5 +1,10 @@
 variables:
+  APP_NAME: "th2-grpc-act-ssh"
+  MAJOR_VERSION: "1"
+  MINOR_VERSION: "0"
+  MAINTENANCE_VERSION: "1"
   DOCKER_PUBLISH_ENABLED: 'false'
+
 
 include:
   - project: "vivarium/th2/pipelines"
