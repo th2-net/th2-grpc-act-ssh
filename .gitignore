@@ -3,6 +3,7 @@
 .gradle
 build
 src/gen
+shared/
 
 __pycache__/
 *.py[cod]
